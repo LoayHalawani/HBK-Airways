@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage: Welcome to HBK Airways!</title>
     <link rel="icon" type="image/x-icon" href="../Assets/Logo.jpeg">
-    <link rel="stylesheet" href="CSS/Mainpage.css" />
-    <link rel="stylesheet" href="CSS/Navbar.css" />
-    <link rel="stylesheet" href="CSS/Footer.css" />
+    <link rel="stylesheet" href="../../client/css/Mainpage.css" />
+    <link rel="stylesheet" href="../../client/css/Navbar.css" />
+    <link rel="stylesheet" href="../../client/css/Footer.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="brand-title"> <a href="Mainpage.php"> <img src="Assets/HBK.png" width="170em"> </a></div>
+        <div class="brand-title"> <a href="Mainpage.php"> <img src="../../client/assets/HBK.png" width="170em"> </a></div>
         <a href="#" class="toggle-button">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -31,13 +31,13 @@
                         <button class="drop"><i class="fa fa-user" id="icons"></i>Account</button>
                         <div class="dropdown-links">
                             <?php if (!isset($_COOKIE['username'])): ?>
-                            <a href="SignUp.php">Sign up</a>
-                            <a href="SignIn.php">Login</a>
+                                <a href="SignUp.php">Sign up</a>
+                                <a href="SignIn.php">Login</a>
                             <?php else: ?>
-                            <a href="SignOut.php">Sign out</a>
-                            <a href="bookedFlights.php">Booked flights</a>
-                            <a href="reservedFlights.php">Reserved flights</a>
-                            <a href="Account Information.php">Manage Account Details</a>
+                                <a href="SignOut.php">Sign out</a>
+                                <a href="bookedFlights.php">Booked flights</a>
+                                <a href="reservedFlights.php">Reserved flights</a>
+                                <a href="Account Information.php">Manage Account Details</a>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
         <div class="line2"></div>
         <div class="row">
             <div class="col">
-                <img src="Assets/Beirut.jpg" alt="">
+                <img src="../../client/assets/Beirut.jpg" alt="">
                 <h4> Beirut, Lebanon</h4>
                 <p class="p1"> Known as the paris of the middle east, the creme de la creme of east meets west. Discover
                     its beautiful bustling streets to have an exotic experience.</p>
@@ -69,7 +69,7 @@
                 <a href="searchFlights.php" class="btn"> Book a Ticket </a>
             </div>
             <div class="col">
-                <img src="Assets/Istanbul.webp" alt="">
+                <img src="../../client/assets/Istanbul.webp" alt="">
                 <h4> Istanbul, Turkey</h4>
                 <p class="p1"> When in Rome is overrated, however when in Istanbul is underrated.
                     Visit it's well known city centre, the Taksim square to shop and dine in its famous restaurants.</p>
@@ -77,7 +77,7 @@
                 <a href="searchFlights.php" class="btn"> Book a Ticket </a>
             </div>
             <div class="col">
-                <img src="Assets/Dubai.jpg" alt="">
+                <img src="../../client/assets/Dubai.jpg" alt="">
                 <h4> Dubai, United Arab Emirates</h4>
                 <p class="p1"> They say oasis are mirage's of the desert. Dubai proves this wrong.
                     Explore its diverse malls and be sure to visit the world's tallest building the Burj Khalifa.</p>
@@ -86,7 +86,7 @@
             </div>
         </div>
     </section>
-    <script src="JS/Navbar.js"></script>
+    <script src="../../client/js/Navbar.js"></script>
 </body>
 <footer>
     <div class="social">

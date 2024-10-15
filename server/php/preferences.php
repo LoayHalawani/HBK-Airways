@@ -58,16 +58,16 @@ $_SESSION['infant_price'] = intval($flight['infant_ticket']) * $TicketTypePrice;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/preferences.css">
-    <link rel="stylesheet" href="CSS/Navbar.css">
-    <link rel="stylesheet" href="CSS/Footer.css">
+    <link rel="stylesheet" href="../../client/css/preferences.css">
+    <link rel="stylesheet" href="../../client/css/Navbar.css">
+    <link rel="stylesheet" href="../../client/css/Footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="brand-title"> <a href="Mainpage.php"> <img src="Assets/HBK.png" width="170em"> </a></div>
+        <div class="brand-title"> <a href="Mainpage.php"> <img src="../../client/assets/HBK.png" width="170em"> </a></div>
         <a href="#" class="toggle-button">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -83,13 +83,13 @@ $_SESSION['infant_price'] = intval($flight['infant_ticket']) * $TicketTypePrice;
                         <button class="drop"><i class="fa fa-user" id="icons"></i>Account</button>
                         <div class="dropdown-links">
                             <?php if (!isset($_COOKIE['username'])): ?>
-                            <a href="SignUp.php">Sign up</a>
-                            <a href="SignIn.php">Login</a>
+                                <a href="SignUp.php">Sign up</a>
+                                <a href="SignIn.php">Login</a>
                             <?php else: ?>
-                            <a href="SignOut.php">Sign out</a>
-                            <a href="bookedFlights.php">Booked flights</a>
-                            <a href="reservedFlights.php">Reserved flights</a>
-                            <a href="Account Information.php">Manage Account Details</a>
+                                <a href="SignOut.php">Sign out</a>
+                                <a href="bookedFlights.php">Booked flights</a>
+                                <a href="reservedFlights.php">Reserved flights</a>
+                                <a href="Account Information.php">Manage Account Details</a>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -104,9 +104,9 @@ $_SESSION['infant_price'] = intval($flight['infant_ticket']) * $TicketTypePrice;
                 <label>Pick seat number:</label>
                 <select id="option" name="seat_nb" required>
                     <?php foreach ($allAvailableSeats as $seatNumber): ?>
-                    <option>
-                        <?php print($seatNumber) ?>
-                    </option>
+                        <option>
+                            <?php print($seatNumber) ?>
+                        </option>
                     <?php endforeach; ?>
                 </select>
                 <label>Your favorite meal:</label>
@@ -143,7 +143,7 @@ $_SESSION['infant_price'] = intval($flight['infant_ticket']) * $TicketTypePrice;
         <hr class="line">
         <p>&copy 2022 HBK Airways, Inc. <em>All Rights Reserved</em></p>
     </footer>
-    <script src="JS/Navbar.js"></script>
+    <script src="../../client/js/Navbar.js"></script>
 </body>
 
 </html>

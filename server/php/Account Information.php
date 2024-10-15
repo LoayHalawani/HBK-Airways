@@ -23,18 +23,18 @@ $result = $usercollection->findOne(['Username' => $username]);
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Account: Manage Account Details</title>
-    <link rel="icon" type="image/x-icon" href="../Assets/Logo.jpeg">
+    <link rel="icon" type="image/x-icon" href="../../client/assets/Logo.jpeg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="CSS/AccountInformation.css" />
-    <link rel="stylesheet" href="CSS/Navbar.css" />
-    <link rel="stylesheet" href="CSS/Footer.css" />
+    <link rel="stylesheet" href="../../client/css/AccountInformation.css" />
+    <link rel="stylesheet" href="../../client/css/Navbar.css" />
+    <link rel="stylesheet" href="../../client/css/Footer.css" />
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="brand-title"> <a href="Mainpage.php"> <img src="Assets/HBK.png" width="170em"> </a></div>
+        <div class="brand-title"> <a href="Mainpage.php"> <img src="../../client/assets/HBK.png" width="170em"> </a></div>
         <a href="#" class="toggle-button">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -50,13 +50,13 @@ $result = $usercollection->findOne(['Username' => $username]);
                         <button class="drop"><i class="fa fa-user" id="icons"></i>Account</button>
                         <div class="dropdown-links">
                             <?php if (!isset($_COOKIE['username'])): ?>
-                            <a href="SignUp.php">Sign up</a>
-                            <a href="SignIn.php">Login</a>
+                                <a href="SignUp.php">Sign up</a>
+                                <a href="SignIn.php">Login</a>
                             <?php else: ?>
-                            <a href="SignOut.php">Sign out</a>
-                            <a href="bookedFlights.php">Booked flights</a>
-                            <a href="reservedFlights.php">Reserved flights</a>
-                            <a href="Account Information.php">Manage Account Details</a>
+                                <a href="SignOut.php">Sign out</a>
+                                <a href="bookedFlights.php">Booked flights</a>
+                                <a href="reservedFlights.php">Reserved flights</a>
+                                <a href="Account Information.php">Manage Account Details</a>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -446,9 +446,9 @@ $result = $usercollection->findOne(['Username' => $username]);
             </div>
         </form>
     </div>
-    <script type="text/javascript" src="JS/update.js"></script>
-    <script type="text/javascript" src="JS/Validator.js"> </script>
-    <script src="JS/Navbar.js"></script>
+    <script type="text/javascript" src="../../client/js/update.js"></script>
+    <script type="text/javascript" src="../../client/js/Validator.js"> </script>
+    <script src="../../client/js/Navbar.js"></script>
 </body>
 <footer>
     <div class="social">

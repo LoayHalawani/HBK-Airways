@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="CSS/Booking.css">
-    <link rel="stylesheet" href="CSS/Navbar.css">
-    <link rel="stylesheet" href="CSS/Footer.css" />
+    <link rel="stylesheet" href="../../client/css/Booking.css">
+    <link rel="stylesheet" href="../../client/css/Navbar.css">
+    <link rel="stylesheet" href="../../client/css/Footer.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="//code.jquery.com/jquery-3.6.1.js"></script>
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="brand-title"> <a href="Mainpage.php"> <img src="Assets/HBK.png" width="170em"> </a></div>
+        <div class="brand-title"> <a href="Mainpage.php"> <img src="../../client/assets/HBK.png" width="170em"> </a></div>
         <a href="#" class="toggle-button">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -31,13 +31,13 @@
                         <button class="drop"><i class="fa fa-user" id="icons"></i>Account</button>
                         <div class="dropdown-links">
                             <?php if (!isset($_COOKIE['username'])): ?>
-                            <a href="SignUp.php">Sign up</a>
-                            <a href="SignIn.php">Login</a>
+                                <a href="SignUp.php">Sign up</a>
+                                <a href="SignIn.php">Login</a>
                             <?php else: ?>
-                            <a href="SignOut.php">Sign out</a>
-                            <a href="bookedFlights.php">Booked flights</a>
-                            <a href="reservedFlights.php">Reserved flights</a>
-                            <a href="Account Information.php">Manage Account Details</a>
+                                <a href="SignOut.php">Sign out</a>
+                                <a href="bookedFlights.php">Booked flights</a>
+                                <a href="reservedFlights.php">Reserved flights</a>
+                                <a href="Account Information.php">Manage Account Details</a>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -140,6 +140,7 @@
             </div>
         </section>
     </form>
+    <br><br><br><br><br><br><br>
     <footer>
         <a href="#"><i id="social-media" class="fa fa-facebook"></i></a>
         <a href="#"><i id="social-media" class="fa fa-twitter"></i></a>
@@ -147,8 +148,8 @@
         <hr class="line">
         <p>&copy 2022 HBK Airways, Inc. <em>All Rights Reserved</em></p>
     </footer>
-    <script src="JS/SearchFlights.js"></script>
-    <script src="JS/Navbar.js"></script>
+    <script src="../../client/js/SearchFlights.js"></script>
+    <script src="../../client/js/Navbar.js"></script>
 </body>
 
 </html>

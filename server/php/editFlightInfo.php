@@ -30,16 +30,16 @@ for ($i = 0; $i < count($flight['seats']); $i++) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="CSS/EditFlightInfo.css">
-    <link rel="stylesheet" href="CSS/Navbar.css">
-    <link rel="stylesheet" href="CSS/Footer.css" />
+    <link rel="stylesheet" href="../../client/css/EditFlightInfo.css">
+    <link rel="stylesheet" href="../../client/css/Navbar.css">
+    <link rel="stylesheet" href="../../client/css/Footer.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="//code.jquery.com/jquery-3.6.1.js"></script>
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="brand-title"> <a href="Mainpage.php"> <img src="Assets/HBK.png" width="170em"> </a></div>
+        <div class="brand-title"> <a href="Mainpage.php"> <img src="../../client/assets/HBK.png" width="170em"> </a></div>
         <a href="#" class="toggle-button">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -55,13 +55,13 @@ for ($i = 0; $i < count($flight['seats']); $i++) {
                         <button class="drop"><i class="fa fa-user" id="icons"></i>Account</button>
                         <div class="dropdown-links">
                             <?php if (!isset($_COOKIE['username'])): ?>
-                            <a href="SignUp.php">Sign up</a>
-                            <a href="SignIn.php">Login</a>
+                                <a href="SignUp.php">Sign up</a>
+                                <a href="SignIn.php">Login</a>
                             <?php else: ?>
-                            <a href="SignOut.php">Sign out</a>
-                            <a href="bookedFlights.php">Booked flights</a>
-                            <a href="reservedFlights.php">Reserved flights</a>
-                            <a href="Account Information.php">Manage Account Details</a>
+                                <a href="SignOut.php">Sign out</a>
+                                <a href="bookedFlights.php">Booked flights</a>
+                                <a href="reservedFlights.php">Reserved flights</a>
+                                <a href="Account Information.php">Manage Account Details</a>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -81,9 +81,9 @@ for ($i = 0; $i < count($flight['seats']); $i++) {
                 <label>Picked seat number:</label>
                 <select id="option" name="changedSeatNb">
                     <?php foreach ($allAvailableSeats as $seatNumber): ?>
-                    <option>
-                        <?php print($seatNumber) ?>
-                    </option>
+                        <option>
+                            <?php print($seatNumber) ?>
+                        </option>
                     <?php endforeach; ?>
                 </select>
                 <label>Your favorite meal:</label>
@@ -170,17 +170,17 @@ for ($i = 0; $i < count($flight['seats']); $i++) {
         blanketsCheck.click(addPrice);
         pillowsCheck.click(addPrice);
         magazinesCheck.click(addPrice);
+
         function addPrice(e) {
             if (e.target.checked) {
                 price += 10;
-            }
-            else {
+            } else {
                 price -= 10;
             }
             priceSpan.html(price);
         }
     </script>
-    <script src="JS/Navbar.js"></script>
+    <script src="../../client/js/Navbar.js"></script>
 </body>
 
 </html>

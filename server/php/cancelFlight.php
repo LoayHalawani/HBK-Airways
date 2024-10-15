@@ -37,4 +37,3 @@ if ($bookedOrReserved == 'booked') {
     );
     header("Location: reservedFlights.php");
 }
-?>

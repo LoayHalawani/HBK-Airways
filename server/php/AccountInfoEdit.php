@@ -28,4 +28,3 @@ echo '<script type="text/javascript">';
 echo 'alert("Information has been succesfully changed ! Please Login again.");';
 echo 'window.location.href = "SignIn.php";';
 echo '</script>';
-?>

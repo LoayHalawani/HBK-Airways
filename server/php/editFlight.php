@@ -45,4 +45,3 @@ if (isset($_POST['changedSeatNb'])) {
 }
 
 header('Location: ' . $_SERVER['HTTP_REFERER']);
-?>

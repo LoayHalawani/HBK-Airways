@@ -16,7 +16,7 @@ setcookie('username', $username, time() - (86400 * 30));
 <head>
     <title>Account Signed Out !</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="CSS/Form.css" />
+    <link rel="stylesheet" href="../../client/css/Form.css" />
     <script src="https://code.jquery.com/jquery-git.js"> </script>
 </head>
 
@@ -33,12 +33,16 @@ setcookie('username', $username, time() - (86400 * 30));
         </div>
     </header>
     <script>
-        $("button").click(function () {
-            $(".redirect").text("Redirecting to Homepage....").css({ "color": "black", "font-weight": "bold", "font-family": "Segoe UI" });
+        $("button").click(function() {
+            $(".redirect").text("Redirecting to Homepage....").css({
+                "color": "black",
+                "font-weight": "bold",
+                "font-family": "Segoe UI"
+            });
 
             let delay = 5000;
             let url = "Mainpage.php";
-            setTimeout(function () {
+            setTimeout(function() {
                 location = url;
             }, 5000)
         })

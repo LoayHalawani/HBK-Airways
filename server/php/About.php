@@ -7,15 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us</title>
-    <link rel="stylesheet" href="CSS/About.css" />
-    <link rel="stylesheet" href="CSS/Navbar.css" />
-    <link rel="stylesheet" href="CSS/Footer.css" />
+    <link rel="stylesheet" href="../../client/css/About.css" />
+    <link rel="stylesheet" href="../../client/css/Navbar.css" />
+    <link rel="stylesheet" href="../../client/css/Footer.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="brand-title"> <a href="Mainpage.php"> <img src="Assets/HBK.png" width="170em"> </a></div>
+        <div class="brand-title"> <a href="Mainpage.php"> <img src="../../client/assets/HBK.png" width="170em"> </a></div>
         <a href="#" class="toggle-button">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -31,13 +31,13 @@
                         <button class="drop"><i class="fa fa-user" id="icons"></i>Account</button>
                         <div class="dropdown-links">
                             <?php if (!isset($_COOKIE['username'])): ?>
-                            <a href="SignUp.php">Sign up</a>
-                            <a href="SignIn.php">Login</a>
+                                <a href="SignUp.php">Sign up</a>
+                                <a href="SignIn.php">Login</a>
                             <?php else: ?>
-                            <a href="SignOut.php">Sign out</a>
-                            <a href="bookedFlights.php">Booked flights</a>
-                            <a href="reservedFlights.php">Reserved flights</a>
-                            <a href="Account Information.php">Manage Account Details</a>
+                                <a href="SignOut.php">Sign out</a>
+                                <a href="bookedFlights.php">Booked flights</a>
+                                <a href="reservedFlights.php">Reserved flights</a>
+                                <a href="Account Information.php">Manage Account Details</a>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -49,13 +49,13 @@
     <p class="desc">Connecting the world through the sky.</p>
     <br><br>
     <div class="div1">
-        <img src="Assets/ezgif-3-611a348731.jpg" width=100% height=50% />
+        <img src="../../client/assets/ezgif-3-611a348731.jpg" width=100% height=50% />
         <h2 style="padding-left: 5%;">Our fleet</h2>
         <p style="padding-left: 5%;">Discover our modern, fuel-efficient aircrafts and future designs.</p>
         <p style="padding-left: 5%;"><a href="#" onclick="function1()">Learn more</a></p>
     </div>
     <div class="div2">
-        <img src="Assets/join-us.jpg" width=100% height=50% />
+        <img src="../../client/assets/join-us.jpg" width=100% height=50% />
         <h2 style="padding-left: 5%;">Join us</h2>
         <p style="padding-left: 5%;">Our people are our greatest asset. Explore opportunities to become a part of the
             HBK Air-
@@ -63,7 +63,7 @@
         <p style="padding-left: 5%;"><a href="#" onclick="function2()">Learn more</a></p>
     </div>
     <div class="div3">
-        <img src="Assets/istockphoto-1276398647-612x612.jpg" width=100% height=50% />
+        <img src="../../client/assets/istockphoto-1276398647-612x612.jpg" width=100% height=50% />
         <h2 style="padding-left: 5%;">Affiliates</h2>
         <p style="padding-left: 5%;">Find out how you can work with HBK Airways.</p>
         <p style="padding-left: 5%;"><a href="#" onclick="function3()">Learn more</a></p>
@@ -99,26 +99,25 @@
             var x = document.getElementById("div1");
             if (x.style.display === "none") {
                 x.style.display = "block";
-            }
-            else {
+            } else {
                 x.style.display = "none";
             }
         }
+
         function function2() {
             var x = document.getElementById("div2");
             if (x.style.display === "none") {
                 x.style.display = "block";
-            }
-            else {
+            } else {
                 x.style.display = "none";
             }
         }
+
         function function3() {
             var x = document.getElementById("div3");
             if (x.style.display === "none") {
                 x.style.display = "block";
-            }
-            else {
+            } else {
                 x.style.display = "none";
             }
         }

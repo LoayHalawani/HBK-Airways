@@ -16,7 +16,6 @@ if (isset($result)) {
         echo 'alert("Incorrect Username/Password");';
         echo 'window.location.href = "SignIn.php";';
         echo '</script>';
-
     }
 } else {
     echo '<script type="text/javascript">';
@@ -24,4 +23,3 @@ if (isset($result)) {
     echo 'window.location.href = "SignIn.php";';
     echo '</script>';
 }
-?>

@@ -16,14 +16,14 @@ if (isset($_COOKIE['username'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Account: Login</title>
     <link rel="icon" type="image/x-icon" href="../Assets/Logo.jpeg">
-    <link rel="stylesheet" href="CSS/Sign In.css" />
-    <link rel="stylesheet" href="CSS/Navbar.css" />
-    <link rel="stylesheet" href="CSS/Footer.css" />
+    <link rel="stylesheet" href="../../client/css/Sign In.css" />
+    <link rel="stylesheet" href="../../client/css/Navbar.css" />
+    <link rel="stylesheet" href="../../client/css/Footer.css" />
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="brand-title"> <a href="Mainpage.php"> <img src="Assets/HBK.png" width="170em"> </a></div>
+        <div class="brand-title"> <a href="Mainpage.php"> <img src="../../client/assets/HBK.png" width="170em"> </a></div>
         <a href="#" class="toggle-button">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -39,12 +39,12 @@ if (isset($_COOKIE['username'])) {
                         <button class="drop"><i class="fa fa-user" id="icons"></i>Account</button>
                         <div class="dropdown-links">
                             <?php if (!isset($_COOKIE['username'])): ?>
-                            <a href="SignUp.php">Sign up</a>
-                            <a href="SignIn.php">Login</a>
+                                <a href="SignUp.php">Sign up</a>
+                                <a href="SignIn.php">Login</a>
                             <?php else: ?>
-                            <a href="SignOut.php">Sign out</a>
-                            <a href="bookedFlights.php">Booked flights</a>
-                            <a href="reservedFlights.php">Reserved flights</a>
+                                <a href="SignOut.php">Sign out</a>
+                                <a href="bookedFlights.php">Booked flights</a>
+                                <a href="reservedFlights.php">Reserved flights</a>
                             <?php endif; ?>
                             <a href="Account Information.php">Manage Account Details</a>
                         </div>
@@ -70,7 +70,7 @@ if (isset($_COOKIE['username'])) {
                     <div class="invalid-feedback">Please Enter Your password.</div>
                 </div>
             </div>
-            <script type="text/javascript" src="../JS/Validator.js">
+            <script type="text/javascript" src="../../client/js/Validator.js">
             </script>
             <div class="row">
                 <div class="col-sm-12 p-2">
@@ -79,8 +79,8 @@ if (isset($_COOKIE['username'])) {
             </div>
         </form>
     </div>
-    <script src="JS/Validator.js"></script>
-    <script src="JS/Navbar.js"></script>
+    <script src="../../client/js/Validator.js"></script>
+    <script src="../../client/js/Navbar.js"></script>
 </body>
 <footer>
     <div class="social">

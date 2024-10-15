@@ -30,15 +30,15 @@ $results = $collection->find(
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="CSS/OneWayResults.css">
-    <link rel="stylesheet" href="CSS/Navbar.css">
-    <link rel="stylesheet" href="CSS/Footer.css">
+    <link rel="stylesheet" href="../../client/css/OneWayResults.css">
+    <link rel="stylesheet" href="../../client/css/Navbar.css">
+    <link rel="stylesheet" href="../../client/css/Footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="brand-title"> <a href="Mainpage.php"> <img src="Assets/HBK.png" width="170em"> </a></div>
+        <div class="brand-title"> <a href="Mainpage.php"> <img src="../../client/assets/HBK.png" width="170em"> </a></div>
         <a href="#" class="toggle-button">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -54,13 +54,13 @@ $results = $collection->find(
                         <button class="drop"><i class="fa fa-user" id="icons"></i>Account</button>
                         <div class="dropdown-links">
                             <?php if (!isset($_COOKIE['username'])): ?>
-                            <a href="SignUp.php">Sign up</a>
-                            <a href="SignIn.php">Login</a>
+                                <a href="SignUp.php">Sign up</a>
+                                <a href="SignIn.php">Login</a>
                             <?php else: ?>
-                            <a href="SignOut.php">Sign out</a>
-                            <a href="bookedFlights.php">Booked flights</a>
-                            <a href="reservedFlights.php">Reserved flights</a>
-                            <a href="Account Information.php">Manage Account Details</a>
+                                <a href="SignOut.php">Sign out</a>
+                                <a href="bookedFlights.php">Booked flights</a>
+                                <a href="reservedFlights.php">Reserved flights</a>
+                                <a href="Account Information.php">Manage Account Details</a>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -70,51 +70,51 @@ $results = $collection->find(
     </nav>
     <section id="flights">
         <?php foreach ($results as $entry): ?>
-        <form action="preferences.php" method="GET">
-            <div class="flight" id="<?php print($entry['id']) ?>">
-                <input type="text" style="display: none;" value="<?php print($entry['id']) ?>" name="flight_id">
-                <p><i class="fa fa-plane" style="font-size:24px; margin-right: 10px;"></i><b
-                        style="font-size: large; margin-right: 10px;">
-                        <?php print($_SESSION['From']) ?>
-                    </b> to <b style="font-size: large; margin-left: 10px;">
-                        <?php print($_SESSION['Destination']) ?>
-                    </b></p>
-                <p>
-                    <?php print($_SESSION['DepartDate']) ?>
-                </p>
-                <div id="info">
-                    <h1>Departure time:</h1>
-                    <h3>
-                        <?php print($entry['departure_time']) ?>
-                    </h3>
+            <form action="preferences.php" method="GET">
+                <div class="flight" id="<?php print($entry['id']) ?>">
+                    <input type="text" style="display: none;" value="<?php print($entry['id']) ?>" name="flight_id">
+                    <p><i class="fa fa-plane" style="font-size:24px; margin-right: 10px;"></i><b
+                            style="font-size: large; margin-right: 10px;">
+                            <?php print($_SESSION['From']) ?>
+                        </b> to <b style="font-size: large; margin-left: 10px;">
+                            <?php print($_SESSION['Destination']) ?>
+                        </b></p>
+                    <p>
+                        <?php print($_SESSION['DepartDate']) ?>
+                    </p>
+                    <div id="info">
+                        <h1>Departure time:</h1>
+                        <h3>
+                            <?php print($entry['departure_time']) ?>
+                        </h3>
+                    </div>
+                    <button type="button" id="showDetails">Show details</button>
+                    <div id="ajaxSection" style="display: none;">
+                        <div id="info">
+                            <h1>Arrival time:</h1>
+                            <h3 id="arrival_time">
+                            </h3>
+                        </div>
+                        <div id="info">
+                            <h1>Duration:</h1>
+                            <h3 id="duration">
+                            </h3>
+                        </div>
+                        <div id="info">
+                            <h1>Aircraft:</h1>
+                            <h3 id="aircraft">
+                            </h3>
+                        </div>
+                        <button id="chooseBtn">CHOOSE</button>
+                        <div id="info">
+                            <h1>Terminal:</h1>
+                            <h3 id="terminal">
+                            </h3>
+                        </div>
+                        <button type="button" id="closeDetails">X</button>
+                    </div>
                 </div>
-                <button type="button" id="showDetails">Show details</button>
-                <div id="ajaxSection" style="display: none;">
-                    <div id="info">
-                        <h1>Arrival time:</h1>
-                        <h3 id="arrival_time">
-                        </h3>
-                    </div>
-                    <div id="info">
-                        <h1>Duration:</h1>
-                        <h3 id="duration">
-                        </h3>
-                    </div>
-                    <div id="info">
-                        <h1>Aircraft:</h1>
-                        <h3 id="aircraft">
-                        </h3>
-                    </div>
-                    <button id="chooseBtn">CHOOSE</button>
-                    <div id="info">
-                        <h1>Terminal:</h1>
-                        <h3 id="terminal">
-                        </h3>
-                    </div>
-                    <button type="button" id="closeDetails">X</button>
-                </div>
-            </div>
-        </form>
+            </form>
         <?php endforeach; ?>
     </section>
     <style>
@@ -138,8 +138,8 @@ $results = $collection->find(
         <hr class="line">
         <p>&copy 2022 HBK Airways, Inc. <em>All Rights Reserved</em></p>
     </footer>
-    <script src="JS/Navbar.js"></script>
-    <script src="JS/OnewayResults.js"></script>
+    <script src="../../client/js/Navbar.js"></script>
+    <script src="../../client/js/OnewayResults.js"></script>
 </body>
 
 </html>
